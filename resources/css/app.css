@@ -1,0 +1,40 @@
+/*body {*/
+/*    background-color:pink;*/
+/*}*/
+
+.hero {
+    width: 90%;
+    height: 20vh;
+    background-color: yellow;
+    background-image: linear-gradient(to bottom, rgb(200,171,93,0.7), rgb(37,121,193,0.5));
+    border-radius: 10px;
+    padding:5vh;
+    margin: auto;
+}
+
+.hero h1 {
+    text-align: center;
+}
+
+.welcome {
+    width:
+}
+
+.welcome-text{
+    width: 50vw;
+    margin:auto;
+}
+
+.welcome-img {
+    background-color: red;
+    background-image: url("https://i.ibb.co/JKqLZJm/happy-dog.png");
+    width: 50vw;
+    height: 70vh;
+    background-size: cover;
+    background-position: center center;
+    margin:auto;
+}
+
+
+
+
