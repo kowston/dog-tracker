@@ -1,14 +1,22 @@
 /*body {*/
 /*    background-color:pink;*/
 /*}*/
+html {
+    font-family: sans-serif;
+}
 
-.hero {
-    width: 90%;
-    height: 20vh;
-    background-color: yellow;
-    background-image: linear-gradient(to bottom, rgb(200,171,93,0.7), rgb(37,121,193,0.5));
-    border-radius: 10px;
-    padding:5vh;
+.main-layout {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+
+.hero, .footer {
+    width: 100%;
+    background-image: linear-gradient(to bottom, rgb(256, 256, 256,0.7), rgb(37,121,193,0.5));
     margin: auto;
 }
 
@@ -16,23 +24,47 @@
     text-align: center;
 }
 
-.welcome {
-    width:
+.hero h2 {
+    text-align: center;
 }
 
-.welcome-text{
+.welcome-text, .points{
     width: 50vw;
     margin:auto;
 }
 
 .welcome-img {
-    background-color: red;
-    background-image: url("https://i.ibb.co/JKqLZJm/happy-dog.png");
+    background-color:forestgreen;
+    background-image: linear-gradient(to top, rgb(12, 28, 83, 0.8), rgb(24,37,68,0.6)), url("https://i.ibb.co/JKqLZJm/happy-dog.png");
     width: 50vw;
-    height: 70vh;
+    height: 40vh;
     background-size: cover;
-    background-position: center center;
+    background-position:  center center, top -230px center;
     margin:auto;
+    margin-bottom: 5vh;
+    position: relative;
+    border-radius: 10px;
+}
+
+.welcome-img button {
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: #4a5568;
+    padding:20px;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+
+.environments, .symptoms {
+    margin:auto;
+    margin-top: -4vw;
+    float:left;
+    width:18vw;
+    padding:3vw;
 }
 
 

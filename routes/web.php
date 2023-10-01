@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestingSpaceController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\DogTrackerController;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('dogtracker', [DogTrackerController::class, 'index'])->name('hecko');
+Route::get('dogtracker/view-dog', [DogTrackerController::class, 'view-dog']);
+Route::get('dogtracker/view-dog', [DogTrackerController::class, 'create-dog']);
+
+Route::get('testing-space', [TestingSpaceController::class, 'index']);

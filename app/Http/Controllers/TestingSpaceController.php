@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DogTrackerController extends Controller
+class TestingSpaceController extends Controller
 {
     public function index()
     {
 //      return view('dogtracker.index');
         $dogName = 'Hector';
-        return view('dogtracker.index', compact('dogName'));
+        return view('testingspace.index', compact('dogName'));
+        // use in blade as {{ $dogName }} wherever I want it to appear
     }
 }
 
