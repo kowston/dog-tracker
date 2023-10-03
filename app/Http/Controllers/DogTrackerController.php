@@ -3,27 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use App\Services\PollenService;
 
 class DogTrackerController extends Controller
 {
-    protected $pollenService;
-
-    public function __construct(PollenService $pollenService)
+    public function index(PollenService $pollenService)
     {
-        $this->pollenService = $pollenService;
-    }
+        $dogName = 'Hecktor';
+        $pollenData = $pollenService->get(40.7128, -74.0060);
 
-    public function index()
-    {
-        $pollenData = $this->pollenService->getPollenData(40.7128, -74.0060); // Replace with your desired coordinates
-
-//      return view('dogtracker.index');
-//        $dogname = 'Hector';
-//        return view('dogtracker.index', compact('dogname', 'pollenData'));
-
-        return view('pollen.index', ['pollenData' => $pollenData]);
+        return view('dogtracker.index', compact('dogName', 'pollenData'));
     }
 
     public function view_dog_records()
